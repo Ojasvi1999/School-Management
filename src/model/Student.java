@@ -3,12 +3,16 @@ package model;
 public class Student {
     String name;
     int standard;
+    int rollNo;
+
+
 
     public Student(){}
 
-    public Student(String name, int standard){
+    public Student(String name, int standard, int rollNo){
         this.name = name;
         this.standard = standard;
+        this.rollNo = rollNo;
     }
 
     public String getName() {
@@ -25,5 +29,13 @@ public class Student {
 
     public void setStandard(int standard) {
         this.standard = standard;
+    }
+
+    public int getRollNo() {
+        return rollNo;
+    }
+
+    public void setRollNo(int rollNo) {
+        this.rollNo = rollNo;
     }
 }

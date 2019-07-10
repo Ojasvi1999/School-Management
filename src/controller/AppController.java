@@ -51,6 +51,7 @@ public class AppController {
 
             String name;
             int rollNo;
+            int standard;
 
             System.out.println("ADD Student");
             System.out.println("Enter name: ");
@@ -58,8 +59,10 @@ public class AppController {
 
             System.out.println("Enter rollno: ");
             rollNo = sc.nextInt();
+            System.out.println("Enter Standard");
+            standard = sc.nextInt();
 
-            s[c] = new Student(name, rollNo);
+            s[c] = new Student(name,standard , rollNo);
             c++;
         }else{
             System.out.println("Array is full");
@@ -69,6 +72,8 @@ public class AppController {
     void display(){
         for(int i=0;i<c;i++){
             System.out.println(s[i].getName());
+            System.out.println(s[i].getRollNo());
+            System.out.println(s[i].getStandard());
         }
     }
 }
