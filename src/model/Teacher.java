@@ -4,6 +4,13 @@ public class Teacher {
     String name;
     int salary;
 
+    public Teacher(){}
+
+    public Teacher(String name, int salary){
+        this.name = name;
+        this.salary = salary;
+    }
+
     public String getName() {
         return name;
     }

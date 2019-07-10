@@ -4,6 +4,13 @@ public class Student {
     String name;
     int standard;
 
+    public Student(){}
+
+    public Student(String name, int standard){
+        this.name = name;
+        this.standard = standard;
+    }
+
     public String getName() {
         return name;
     }
