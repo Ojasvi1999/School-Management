@@ -1,39 +1,47 @@
 package controller;
 
 import model.Student;
+import repositories.StudentRepository;
 import view.Menu;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AppController {
 
-    Student s[] = new Student[5];
+    ArrayList<Student> listStudents = new ArrayList<>();
+
     int c = 0;
 
-    public void execute(){
+    public void execute() {
         Menu menu = new Menu();
         Scanner sc = new Scanner(System.in);
+        StudentRepository studentRepository = new StudentRepository();
 
-        char ch;
+        char cha;
         char ch_mm;
 
-        do{
 
-            ch = menu.getMenu();
+        do {
 
-            switch(ch){
-                case '1' :
-                    addStudent();
+            cha = menu.getMenu();
+
+            switch (cha) {
+                case '1':
+                    studentRepository.addStudent();
                     break;
 
-                case '2' : System.out.println("Remove Student");
+                case '2':
+                    studentRepository.removeStudent();
+
                     break;
 
-                case '3' :
-                    display();
+                case '3':
+                    studentRepository.display();
                     break;
 
-                default:System.out.println("Wrong Choice");
+                default:
+                    System.out.println("Wrong Choice");
                     break;
             }
 
@@ -41,39 +49,7 @@ public class AppController {
             System.out.println("Return to main menu (y/Y): ");
             ch_mm = sc.next().charAt(0);
 
-        }while(ch_mm == 'y' || ch_mm == 'Y');
+        } while (ch_mm == 'y' || ch_mm == 'Y');
     }
 
-
-    void addStudent(){
-        if(c <=4) {
-            Scanner sc = new Scanner(System.in);
-
-            String name;
-            int rollNo;
-            int standard;
-
-            System.out.println("ADD Student");
-            System.out.println("Enter name: ");
-            name = sc.next();
-
-            System.out.println("Enter rollno: ");
-            rollNo = sc.nextInt();
-            System.out.println("Enter Standard");
-            standard = sc.nextInt();
-
-            s[c] = new Student(name,standard , rollNo);
-            c++;
-        }else{
-            System.out.println("Array is full");
-        }
-    }
-
-    void display(){
-        for(int i=0;i<c;i++){
-            System.out.println(s[i].getName());
-            System.out.println(s[i].getRollNo());
-            System.out.println(s[i].getStandard());
-        }
-    }
 }

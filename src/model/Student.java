@@ -1,27 +1,11 @@
 package model;
 
-public class Student {
-    String name;
+import java.util.Scanner;
+
+public class Student extends Person{
+
     int standard;
     int rollNo;
-
-
-
-    public Student(){}
-
-    public Student(String name, int standard, int rollNo){
-        this.name = name;
-        this.standard = standard;
-        this.rollNo = rollNo;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public int getStandard() {
         return standard;
@@ -38,4 +22,5 @@ public class Student {
     public void setRollNo(int rollNo) {
         this.rollNo = rollNo;
     }
+
 }
