@@ -45,7 +45,7 @@ public class MainMenu extends JFrame {
         add(btnTeacher);
         add(btnExit);
 
-        setBounds(200, 200, 800, 100);
+        setBounds(200, 200, 800, 800);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
     }

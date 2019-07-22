@@ -27,6 +27,13 @@ public class StudentMenu extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 new AddStudentForm();
             }
+
+        });
+        btnRemovestudent.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new RemoveStudentForm();
+            }
         });
 
         add(btnAddstudent);
