@@ -29,7 +29,7 @@ public class StudentRepository {
         Student student = new Student();
         student.setName(name);
         student.setRollNo(rollNo);
-        student.setStandard(2);
+        student.setStandard(standard);
 
         listStudents.add(student);
 
@@ -46,11 +46,9 @@ public class StudentRepository {
 
     public void removeStudent() {
         int a;
-
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the index no(of student) you wanna remove");
         a = scan.nextInt();
-
         listStudents.remove(a);
     }
 }

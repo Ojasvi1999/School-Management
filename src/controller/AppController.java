@@ -1,25 +1,22 @@
 package controller;
 
-import model.Student;
 import repositories.StudentRepository;
-import view.Menu;
+import view.MainMenu;
+import view.StudentMenu;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class AppController {
 
-    ArrayList<Student> listStudents = new ArrayList<>();
+    public void execution() {
 
-    int c = 0;
-
-    public void execute() {
-        Menu menu = new Menu();
+        StudentMenu menu = new StudentMenu();
         Scanner sc = new Scanner(System.in);
         StudentRepository studentRepository = new StudentRepository();
 
         char cha;
         char ch_mm;
+
 
 
         do {
@@ -51,5 +48,4 @@ public class AppController {
 
         } while (ch_mm == 'y' || ch_mm == 'Y');
     }
-
 }
